@@ -8,7 +8,6 @@ public class ChainHeadScript : MonoBehaviour {
 	public AudioSource source;
 	public bool isHead = false;
 	public ChainScript chain;
-
 	// Use this for initialization
 
 	void Start(){
@@ -19,6 +18,7 @@ public class ChainHeadScript : MonoBehaviour {
 			chain = transform.GetComponentInParent<ChainScript> ();
 			source = chain.GetComponent<AudioSource> ();
 		}
+
 	}
 	void OnTriggerEnter2D(Collider2D coll) {
 
@@ -39,6 +39,8 @@ public class ChainHeadScript : MonoBehaviour {
 					source.PlayOneShot (hitSound);
 
 				coll.transform.GetComponent<MobScript> ().mobDie ();
+				chain.subChainLength ();
+
 
 				//player hit detection and point attribution
 

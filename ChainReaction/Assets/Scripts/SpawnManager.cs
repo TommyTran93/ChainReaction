@@ -14,6 +14,10 @@ public class SpawnManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spawnTimer = 0;
+		for (int i = 0; i < 3; i++) {
+			SpawnMob ();
+			mobCounter++;
+		}
 	}
 	
 	// Update is called once per frame

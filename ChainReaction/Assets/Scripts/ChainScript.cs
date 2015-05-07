@@ -15,6 +15,7 @@ public class ChainScript : MonoBehaviour {
 	public int playerNumber = 0;
 	public int minChainLength = 5;
 	public bool hasLost = false;
+
 	// Use this for initialization
 	void Start () {
 	//construct the chain
